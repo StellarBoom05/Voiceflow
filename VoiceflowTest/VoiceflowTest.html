@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="VoiceflowTest.css">
+</head>
+
+<body>
+  <h1>TEST</h1>
+  <ul>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+    <li>HI</li>
+
+    <li>HI</li>
+  </ul>
+  <div id="flat-chat" style="width: 50%; height: 600px; margin: 0 auto; "></div>
+
+
+  <script type="text/javascript">
+
+    /*(function () {
+        const TTL = 1 * 60 * 1000; // 15 minutes
+        const TSKEY = "vf_session_ts";
+        const now = Date.now(); const last = Number(localStorage.getItem(TSKEY)); // If no timestamp or TTL expired → clear Voiceflow data
+        if (!last || now - last > TTL) { Object.keys(localStorage).forEach((key) => { if (key.startsWith("vf_") || key.startsWith("voiceflow") || key.includes("chat")) { localStorage.removeItem(key); } }); } // Always refresh timestamp
+        localStorage.setItem(TSKEY, now.toString());
+    })();*/
+
+  (function (d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function () {
+      window.voiceflow.chat.load({
+        verify: { projectID: '' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        render: {
+          //mode: 'embedded',
+          target: document.getElementById('flat-chat')
+        },
+
+          assistant: {
+            //persistence: 'localStorage',
+            //stylesheet: "data:text/css;base64,LyogVXNlciBtZXNzYWdlcyAqLwoudmZyYy11c2VyLXJlc3BvbnNlIC52ZnJjLW1lc3NhZ2UgewogIGZvbnQtc2l6ZTogMTVweCAhaW1wb3J0YW50Owp9CgovKiBBc3Npc3RhbnQgbWVzc2FnZXMgKi8KLnZmcmMtc3lzdGVtLXJlc3BvbnNlIC52ZnJjLW1lc3NhZ2UgewogIGZvbnQtc2l6ZTogMTVweCAhaW1wb3J0YW50Owp9CgoKLnZmcmMtYXZhdGFyIHsKICB3aWR0aDogNjBweCAhaW1wb3J0YW50OwogIGhlaWdodDogNjBweCAhaW1wb3J0YW50Owp9CgoudmZyYy1hdmF0YXIgaW1nIHsKICB3aWR0aDogMTAwJSAhaW1wb3J0YW50OwogIGhlaWdodDogMTAwJSAhaW1wb3J0YW50OwogIGltYWdlLWZpdDogY292ZXI7Cn0KCi8qIFJlc2l6ZSB0aGUgbGF1bmNoZXIgYnV0dG9uIGNvbnRhaW5lciAqLwoudmZyYy1sYXVuY2hlciB7CiAgd2lkdGg6IDkwcHggIWltcG9ydGFudDsKICBoZWlnaHQ6IDkwcHggIWltcG9ydGFudDsKICBtaW4td2lkdGg6IDkwcHggIWltcG9ydGFudDsKICBtaW4taGVpZ2h0OiA5MHB4ICFpbXBvcnRhbnQ7CiAgcGFkZGluZzogMCAhaW1wb3J0YW50OyAvKiBSZW1vdmUgZGVmYXVsdCBwYWRkaW5nICovCn0KCi8qIE1ha2UgdGhlIGltYWdlIGZpbGwgdGhlIGVudGlyZSBsYXVuY2hlciBidXR0b24gKi8KLnZmcmMtbGF1bmNoZXIgaW1nLAoudmZyYy1sYXVuY2hlciBzdmcsCi52ZnJjLWxhdW5jaGVyIC52ZnJjLWljb24gewogIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7CiAgaGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7CiAgbWF4LXdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7CiAgbWF4LWhlaWdodDogMTAwJSAhaW1wb3J0YW50OwogIG9iamVjdC1maXQ6IGNvdmVyICFpbXBvcnRhbnQ7IC8qIFVzZSAnY292ZXInIHRvIGZpbGwgY29tcGxldGVseSwgb3IgJ2NvbnRhaW4nIHRvIGZpdCB3aXRob3V0IGNyb3BwaW5nICovCiAgcGFkZGluZzogMCAhaW1wb3J0YW50OwogIG1hcmdpbjogMCAhaW1wb3J0YW50Owp9CgovKiBUYXJnZXQgYW55IG5lc3RlZCBlbGVtZW50cyBpbnNpZGUgdGhlIGxhdW5jaGVyICovCi52ZnJjLWxhdW5jaGVyID4gKiB7CiAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDsKICBoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDsKfQo=", // link to your self-hosted stylesheet
+            //stylesheet: 'https://stellawu-stack.github.io/CSS-custom/Voiceflow.css'  // ← Add this!
+            //extensions: [FileUploadExtension],
+            stylesheet: "VoiceflowTest.css"
+          }
+
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    const FileUploadExtension = {
+name: 'FileUpload',
+type: 'response',
+match: ({ trace }) =>
+ trace.type === 'ext_fileUpload' || trace.payload?.name === 'ext_fileUpload',
+render: ({ trace, element }) => {
+ const fileUploadContainer = document.createElement('div')
+ fileUploadContainer.innerHTML = `
+   <style>
+     .my-file-upload {
+       border: 2px dashed rgba(46, 110, 225, 0.3);
+       padding: 20px;
+       text-align: center;
+       cursor: pointer;
+     }
+   </style>
+   <div class='my-file-upload'>Drag and drop a file here or click to upload</div>
+   <input type='file' style='display: none;'>
+ `
+
+ const fileInput = fileUploadContainer.querySelector('input[type=file]')
+ const fileUploadBox = fileUploadContainer.querySelector('.my-file-upload')
+
+ fileUploadBox.addEventListener('click', () => fileInput.click())
+
+ fileInput.addEventListener('change', () => {
+   const file = fileInput.files[0]
+
+   fileUploadContainer.innerHTML =
+     `<img src="https://s3.amazonaws.com/com.voiceflow.studio/share/upload/upload.gif" width="50">`
+
+   const data = new FormData()
+   data.append('file', file)
+
+   fetch('https://tmpfiles.org/api/v1/upload', {
+     method: 'POST',
+     body: data,
+   })
+     .then((r) => r.json())
+     .then((result) => {
+       fileUploadContainer.innerHTML =
+         `<img src="https://s3.amazonaws.com/com.voiceflow.studio/share/check/check.gif" width="50">`
+
+       window.voiceflow.chat.interact({
+         type: 'complete',
+         payload: {
+           file: result.data.url.replace(
+             'https://tmpfiles.org/',
+             'https://tmpfiles.org/dl/'
+           ),
+         },
+       })
+     })
+     .catch(() => {
+       fileUploadContainer.innerHTML = '<div>Error during upload</div>'
+     })
+ })
+
+ element.appendChild(fileUploadContainer)
+},
+}
+*/
+  </script> 
+   
+
+
+</body>
+
+</html>
