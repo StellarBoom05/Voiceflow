@@ -1,0 +1,42 @@
+.vfrc-chat {
+  background-color: rgb(116, 187, 237);
+  
+}
+
+/* Chat has ended message */
+div._1mt9pkg2 {
+  font-size: 0;
+  color: transparent;
+}
+
+div._1mt9pkg2::after {
+  content: "Das Gespräch wurde beendet";
+  font-size: 14px;
+  color: #333; /* Adjust as needed */
+}
+
+/* Both "Start new chat" buttons */
+#vfrc-start-chat,
+button[label="Start new chat"] {
+  font-size: 0;
+  color: transparent;
+}
+
+#vfrc-start-chat::after,
+button[label="Start new chat"]::after {
+  content: "Neues Gespräch starten";
+  font-size: 16px;
+  color: white;
+}
+
+/* Cancel button */
+button[label="Cancel"] {
+  font-size: 0;
+  color: transparent;
+}
+
+button[label="Cancel"]::after {
+  content: "Abbrechen";
+  font-size: 16px;
+  color: black; /* Adjust color as needed */
+}
