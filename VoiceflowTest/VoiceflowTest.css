@@ -1,0 +1,57 @@
+h1 {
+  color: red;
+}
+
+body {
+  background: #ffffff;
+
+}
+
+
+
+
+/* For the chat dialog container
+.vfrc-chat {
+  box-shadow: none !important;
+} */
+
+/* .vfrc-chat {
+  background-color: rgb(116, 187, 237);
+  
+}
+
+.vfrc-header {
+  background-color: #000000;
+
+}
+*/
+
+/* .vfrc-chat {
+  margin-bottom: 200px; 
+  height: 600px;
+}  */
+
+/*.vfrc-chat {
+  background-color: rgb(116, 187, 237);
+  
+}
+
+.vfrc-widget {
+  height: 500px; to adjust distance of the bottom border from the top
+}
+
+.vfrc-launcher .vfrc-icon {
+  display: none !important;
+}
+*/
+
+/* button[label="Start new chat"] {
+  font-size: 0;
+  color: transparent;
+}
+
+button[label="Start new chat"]::after {
+  content: "Neues Gespräch starten";
+  font-size: 16px;
+  color: white; 
+ */
